@@ -6,7 +6,12 @@ namespace helloworld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+#if NET50
+            Console.WriteLine("Hello .NET 5.0 World!");
+#else
+            Console.WriteLine("Hello old world!");
+#endif
+
         }
     }
 }
